@@ -1,0 +1,378 @@
+@import "./flex";
+@import "./modules";
+@import "./color";
+@import "./button";
+
+@mixin mobile {
+
+    @media(max-width:800px) {
+
+        @content;
+
+    }
+
+}
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+
+}
+
+
+// nav alanı css baslangıc
+
+nav {
+
+
+    @include flex;
+    @extend %nav;
+
+    .navigation {
+
+        display: flex;
+        gap: 40px;
+        font-size: 23px;
+
+        a {
+
+            @extend %a;
+
+        }
+    }
+}
+
+// nav alanı css bitir
+
+//scss info alanı baslancıc
+
+
+
+.section {
+
+    display: flex;
+    justify-content: center;
+    background-color: burlywood;
+
+}
+
+.container {
+
+
+    width: 99%;
+    height: 100%;
+
+
+    .css {
+
+
+
+        @include flex2;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border-radius: 10px;
+
+        .images {
+
+
+
+            display: flex;
+            justify-content: center;
+            flex: 1;
+        }
+
+
+        .css-sec {
+
+            flex: 1;
+            text-align: center;
+
+            h3 {
+
+                color: $primary-color;
+                font-size: 30px;
+            }
+
+            p {
+                color: gray;
+                font-size: 20px;
+            }
+        }
+    }
+
+    .vs {
+        text-align: center;
+        font-size: 40px;
+        color: rebeccapurple;
+
+        span {
+
+
+            color: aqua
+        }
+    }
+
+
+
+
+
+    .sass {
+
+        @include flex2;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        border-radius: 10px;
+        flex-direction: row-reverse;
+
+        h3 {
+
+            text-align: center;
+            font-size: 30px;
+            color: $primary-color;
+        }
+
+        p {
+
+            text-align: center;
+            font-size: 20px;
+            color: gray;
+        }
+
+        .images {
+
+            display: flex;
+            justify-content: center;
+            flex-basis: 48%;
+        }
+
+        .sass-sec {
+
+            flex-basis: 48%;
+            text-align: center;
+        }
+    }
+}
+
+//scss info alanı bitiş
+
+
+//info section  scss baslangıc 
+
+
+.grou {
+
+
+    .info {
+
+
+        background-color: red;
+        height: 500px;
+        width: 100%;
+        background-image: linear-gradient(90deg, #FEE140 0%, #FA709A 100%);
+
+        border-radius: 10px;
+        @include flex;
+
+        @include mobile {
+            flex-direction: column
+        }
+
+        .info-sec {
+
+            text-align: center;
+
+            h1 {
+
+                color: #364a5e;
+
+            }
+
+
+            p {
+
+
+                color: white;
+                margin: 20px 0px;
+
+            }
+
+            .btn {
+                @include button;
+            }
+        }
+    }
+}
+//info section  scss baslangıc
+
+
+
+//FORM ALANI BASLANGIC
+
+
+
+.form-container{
+
+
+width: 100%;
+height: 90vh;
+
+.form-area{
+
+
+
+    height: 100%;
+    height: 100%;
+
+    @include flex;
+
+    .images{
+
+//column  alt alta verir 
+// row yanyana verir.
+    
+display: flex;
+flex-direction: column;
+
+ img{
+width: 150px;
+
+
+}
+    }
+
+
+ form{
+
+
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+text-align: end;
+width: 50%;
+ 
+
+}
+
+input{
+
+border: 1px solid gray;
+border-radius: 30px;
+padding: 5px 0;
+text-align: end;
+}
+
+.btn{
+text-align: center;
+    margin-top: 30px;
+
+    button{
+
+border-radius: 30px;
+border: none;
+padding: 20px 40px;
+background-color: #A9C9FF;
+background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+font-size: 25px;
+    }
+}
+}
+    
+}
+
+
+//footer alanı baslangıc
+
+
+
+
+.footer{
+
+
+    background-color: bisque;
+    width: 100%;
+
+}
+
+.footer-area{
+
+    display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column ;
+}
+
+.contact{
+
+@include flex;
+width: 80%;
+height: 200px;
+border-bottom: 1px solid ;
+
+span {
+
+
+    color: black;
+}
+}
+
+
+.footer-info{
+display: flex;
+width: 90%;
+align-items: center;
+justify-content: space-between;
+
+
+.social-media{
+
+line-height: 30px;
+
+
+p{
+
+
+    white-space: nowrap;
+    span{
+
+
+        color: black;
+    }
+}
+}
+
+.logo{
+
+
+    display: flex;
+flex-direction: column;
+gap: 20px;
+a{
+
+
+    color: #000;
+    font-size: 20px;
+}
+
+}
+
+
+ .images{
+
+
+
+    img{
+
+        width: 100px;
+    }
+ }
+
+}
+//footer alanı bitiş
+
+
+
+
+
+

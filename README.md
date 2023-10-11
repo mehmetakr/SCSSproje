@@ -7,6 +7,7 @@
 Bu proje daha çok scss teknolojileri kullanılarak gerçekleştirilmiştir.
 
 -Color klasöründe renklerin tanımlaması yapılmıştır.
+<br>
 -Flex dosyasında hazır kalıp kodlar tutulmaktadır.
 </p>
 
